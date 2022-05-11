@@ -211,7 +211,8 @@ if __name__ == '__main__':
 In general, most cancers happen between 35 to 70.  Age 45 is a high peak for patients to get a skin cancer.  Some types of skin cancer (vasc, nv) happen to those below 20, and others occur most after 30.
 
 
-## ** 6. Train Test Split based on the data frame **
+## **6. Train Test Split based on the data frame **
+
 We split the dataset to training (70%), validation (10%) and testing (20%) by train_test_split.
 
 ```
@@ -224,7 +225,8 @@ X_train.shape, X_val.shape, X_test.shape
 ((7210, 9), (802, 9), (2003, 9))
 
 
-## ** 7. Creat and transfer the images to the corresponding folders **
+## **7. Creat and transfer the images to the corresponding folders **
+
 We created the subfolders containing the train, Val, and test folder. In addition, we created a folder for all types of skin cancers in each of the folders. Finally, We transferred the images to the corresponding folder based on the data frame and the path in each image ID.
 
 ```
@@ -260,6 +262,7 @@ for first in TVT:
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig6.png)
 
 ## ** 8. Do image augmentation and generate extra images to the imbalanced skin types**
+
 
 The amounts of files in each training folder type tell us the images of nv are much higher than others. The imbalance of the training dataset might cause a high bias in model fitting. Thus we will generate some more images for other kinds of cancers. Here we use image augmentation to oversample the samples in all classes except nv. Here is a simple chart about the oversampling.
 
