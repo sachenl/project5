@@ -3,7 +3,7 @@ Student name: Zhiqiang Sun
 
 Student pace: self paced
 
-## **Business understanding**
+## **Overview**
 The skin cancer dataset contains many medical images that show various kinds of skin cancer. In this project, we will analyze and visualize the relationship between cancer and age and the location of the body. Furthermore, we will use machine learning to train a model that can distinguish the cancer type by given images. 
 
 ## **Dataset**
