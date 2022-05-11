@@ -40,20 +40,28 @@ Here is the plan of the project step by step:
 
 ## **1. Import all the necessary libraries for this project**
 
-
+We imported all the necessary libraries here.
 ## **2. Make a dictionary of images and labels**
 In this steps, I make the path for all the images and a dictionary for all types of skin cancers with full names.
 
 
 path_dict = {os.path.splitext(os.path.basename(x))[0] :x for  x in glob(os.path.join('*', '*.jpg'))}
+
 lesion_type_dict = {
     'nv': 'Melanocytic nevi',
+    
     'mel': 'Melanoma',
+    
     'bkl': 'Benign keratosis-like lesions ',
+    
     'bcc': 'Basal cell carcinoma',
+    
     'akiec': 'Actinic keratoses',
+    
     'vasc': 'Vascular lesions',
+    
     'df': 'Dermatofibroma'
+    
 }
 
 
@@ -67,10 +75,10 @@ In this step, we have read the csv which had the information for all the patient
 ## **4. Process data cleaning**
 In this part, we check the missing values for each column and fill them. 
 
-
+We checked the numbers of null value in each columns.
 ![fig2](https://raw.githubusercontent.com/sachenl/project5/main/images/fig2.png)
 
-
+There are 57 null in age columns. We then fill them with average of the age.
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig3.png)
 
 ## **5. Exploring the data analysis**
@@ -80,12 +88,12 @@ As there is some duplecate lesion_id which belong to same patient, all the featu
 
 
 
-# drop the duplication based on the lesion_id.
+#### drop the duplication based on the lesion_id.
 
 
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig4.png)
 
-# plot distribution of features 'dx', 'dx_type',  'sex', 'localization'.
+#### plot distribution of features 'dx', 'dx_type',  'sex', 'localization'.
 
 
 
@@ -98,7 +106,8 @@ We checked the distribution of columns 'dx', 'dx_type',  'sex', 'localization' f
 4. The localization analysis shows that  lower extremity, back ,trunk abdomen and upper extremity are heavily compromised regions of skin cancer
 
 
-Creat dashboard to visualize the distribution of age for different types of skin cancer
+
+### Creat dashboard to visualize the distribution of age for different types of skin cancer
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/ezgif.com-gif-maker.gif)
 
 
@@ -108,7 +117,7 @@ In general, most cancers happen between 35 to 70.  Age 45 is a high peak for pat
 ## 6. Train Test Split based on the data frame
 We split the dataset to training (70%), validation (10%) and testing (20%) by train_test_split.
 
-
+The shape of each dataset are showed below:
 ((7210, 9), (802, 9), (2003, 9))
 
 
@@ -125,11 +134,11 @@ The amounts of files in each training folder type tell us the images of nv are m
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/oversampling.png)
 
 
-
+We firsted check the number of images in each categories. And generated more images with data augmentation.
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig7.png)
 
 
-
+After data augmentation, we check again the numbers of images in each folder.
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig8.png)
 
 The numers of files in each folders are in same levels.
@@ -137,7 +146,7 @@ The numers of files in each folders are in same levels.
 
 ## **9. Do data generator for training, validation, and test folders**
 
-
+Generat the dator for all three datasets.
 Found 31825 images belonging to 7 classes.
 
 Found 802 images belonging to 7 classes.
@@ -176,16 +185,10 @@ In this step we will check the testing accuracy and validation accuracy of our m
 
 The accuracy of the model is 74.84% which is not bad at all.
 
-
-
-
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig13.png)
-
-
-
+#### Plot the confusion matrix
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig14.png)
 
-
+#### plot the evaluation scores for each category
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig15.png)
 
 The f1 score for nv class is highest and over 0.88. The f1-score on df, akiec and mel are less than 0.5 which sugessted that the prediction on these three type are less accurate.
@@ -196,6 +199,7 @@ The f1 score for nv class is highest and over 0.88. The f1-score on df, akiec an
 It seems that the maximum number of incorrect predicitons are features mel and then df and akiec. The nv has least misclassified type. 
 
 
+#### Finally we plot several of images randomly selected from test folder and mark them with predict and actual case on the top. 
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig17.png)
 
 ## **Conclusion**
