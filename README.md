@@ -259,7 +259,7 @@ for first in TVT:
 
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig6.png)
 
-## ** 8. Do image augmentation and generate extra images to the imbalanced skin types**
+##  8. Do image augmentation and generate extra images to the imbalanced skin types
 
 The amounts of files in each training folder type tell us the images of nv are much higher than others. The imbalance of the training dataset might cause a high bias in model fitting. Thus we will generate some more images for other kinds of cancers. Here we use image augmentation to oversample the samples in all classes except nv. Here is a simple chart about the oversampling.
 
@@ -382,7 +382,7 @@ Found 802 images belonging to 7 classes.
 Found 2003 images belonging to 7 classes.
 
 
-## ** 10. Build the CNN model**
+##  10. Build the CNN model
 
 WE build a CNN model base on the pretrained model 'xception'.
 
