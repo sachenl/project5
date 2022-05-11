@@ -23,7 +23,7 @@ Since the SyriaTel Customer Churn is a binary classification problem problem, I 
   2. All the phone numbers are unique and act as id. So it should not related to the target. I will remove this feature.
   3. The object columns will be catalized.
 
-![fig1](http://127.0.0.1:8050/)
+![fig1](https://raw.githubusercontent.com/sachenl/project5/main/images/ezgif.com-gif-maker.gif)
 
 The above figures show that there are multipal columns contain some outlier data. I then collected all the columns and remove the outlier by 1.5 x   IQR
 
