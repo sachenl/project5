@@ -76,10 +76,15 @@ In this step, we have read the csv which had the information for all the patient
 In this part, we check the missing values for each column and fill them. 
 
 We checked the numbers of null value in each columns.
+
 ![fig2](https://raw.githubusercontent.com/sachenl/project5/main/images/fig2.png)
 
+
 There are 57 null in age columns. We then fill them with average of the age.
+
+
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig3.png)
+
 
 ## **5. Exploring the data analysis**
 In this part, we briefly explored different features of the dataset, their distributions and counts.
@@ -134,12 +139,17 @@ The amounts of files in each training folder type tell us the images of nv are m
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/oversampling.png)
 
 
+
 We firsted check the number of images in each categories. And generated more images with data augmentation.
+
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig7.png)
 
 
+
 After data augmentation, we check again the numbers of images in each folder.
+
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig8.png)
+
 
 The numers of files in each folders are in same levels.
 
