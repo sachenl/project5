@@ -215,4 +215,4 @@ It seems that the maximum number of incorrect predicitons are features mel and t
 ## **Conclusion**
 
 We can extract the information about skin cancer from the metadata and explore the distribution of various features. For example, the most often age of skin cancer occur is around 45.
-We make one CNN model which can fit and predict the type of skin cancer well based on the images. The accuracy is 74.9% which is more efficient than detection with human eyes.![image](https://user-images.githubusercontent.com/57638387/167922696-d2565200-4249-4b78-9b8e-29200e4a2575.png)
+We make one CNN model which can fit and predict the type of skin cancer well based on the images. The accuracy is 74.9% which is more efficient than detection with human eyes.
