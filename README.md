@@ -38,36 +38,9 @@ Here is the plan of the project step by step:
 13. Visualize some random images with prediction
 
 
-## **1. Import all the necessary libraries for this project**
 
-We imported all the necessary libraries here.
-## **2. Make a dictionary of images and labels**
-In this steps, I make the path for all the images and a dictionary for all types of skin cancers with full names.
-
-
-path_dict = {os.path.splitext(os.path.basename(x))[0] :x for  x in glob(os.path.join('*', '*.jpg'))}
-
-lesion_type_dict = {
-    'nv': 'Melanocytic nevi',
-    
-    'mel': 'Melanoma',
-    
-    'bkl': 'Benign keratosis-like lesions ',
-    
-    'bcc': 'Basal cell carcinoma',
-    
-    'akiec': 'Actinic keratoses',
-    
-    'vasc': 'Vascular lesions',
-    
-    'df': 'Dermatofibroma'
-    
-}
-
-
-## **3. Reading and processing the metadata**
+## 3. Reading and processing the metadata**
 In this step, we have read the csv which had the information for all the patients and images. Afterthat, we made three more columns including the cancer type in full name, the label in skin cancers in digital and the path of image_id in the folder.
-
 
 
 ![fig1_meta](https://raw.githubusercontent.com/sachenl/project5/main/images/fig1_meta.png)
