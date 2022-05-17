@@ -86,8 +86,6 @@ The shape of each dataset are showed below:
 We created the subfolders containing the train, Val, and test folder. In addition, we created a folder for all types of skin cancers in each of the folders. Finally, We transferred the images to the corresponding folder based on the data frame and the path in each image ID.
 
 
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig6.png)
-
 ##  8. Do image augmentation and generate extra images to the imbalanced skin types
 
 The amounts of files in each training folder type tell us the images of nv are much higher than others. The imbalance of the training dataset might cause a high bias in model fitting. Thus we will generate some more images for other kinds of cancers. Here we use image augmentation to oversample the samples in all classes except nv. Here is a simple chart about the oversampling.
@@ -96,28 +94,12 @@ The amounts of files in each training folder type tell us the images of nv are m
 
 
 
-We firsted check the number of images in each categories. And generated more images with data augmentation.
-
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig7.png)
-
-
-
-After data augmentation, we check again the numbers of images in each folder.
-
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig8.png)
-
-
-The numers of files in each folders are in same levels.
+Similar to the graph, we firsted check the number of images in each categories. And generated more images with data augmentation to make the files in each folders are in same levels.
 
 
 ## **9. Do data generator for training, validation, and test folders**
 
-Generat the dator for all three datasets.
-Found 31825 images belonging to 7 classes.
-
-Found 802 images belonging to 7 classes.
-
-Found 2003 images belonging to 7 classes.
+Generat the data for all three datasets.
 
 
 ##  10. Build the CNN model
@@ -129,12 +111,7 @@ WE build a CNN model base on the pretrained model 'xception'.
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig9.png)
 
 ## **11. Fitting the model**
-We fit the training data to the model we created earlier
-
-
-
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig10.png)
-
+We fit the training data to the model we created earlier and then plot the accuracy and loss for each of the steps.
 
 ![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig11.png)
 
