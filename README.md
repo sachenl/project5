@@ -54,7 +54,7 @@ In this part, we briefly explored different features of the dataset, their distr
 
 As there is some duplecate lesion_id which belong to same patient, all the features except the image_id for them are same with each other.  Thus, we first find and remove the duplex in patient id  and then plot the distributions of each features.
 
-#### plot distribution of features 'dx', 'dx_type',  'sex', 'localization'.
+#### Plot distribution of features 'dx', 'dx_type',  'sex', 'localization'.
 
 
 
