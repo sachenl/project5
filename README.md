@@ -46,30 +46,13 @@ In this step, we have read the csv which had the information for all the patient
 ![fig1_meta](https://raw.githubusercontent.com/sachenl/project5/main/images/fig1_meta.png)
 
 ## **4. Process data cleaning**
-In this part, we check the missing values for each column and fill them. 
-
-We checked the numbers of null value in each columns.
-
-![fig2](https://raw.githubusercontent.com/sachenl/project5/main/images/fig2.png)
-
-
-There are 57 null in age columns. We then fill them with average of the age.
-
-
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig3.png)
+In this part, we check the missing values for each column and fill them. We found there are 57 nulls in age column, we then filled them with the mean value of age.
 
 
 ## **5. Exploring the data analysis**
 In this part, we briefly explored different features of the dataset, their distributions and counts.
 
-As there is some duplecate lesion_id which belong to same patient, all the features except the image_id for them are same with each other.  Thus, we first find and remove the duplex. 
-
-
-
-#### drop the duplication based on the lesion_id.
-
-
-![](https://raw.githubusercontent.com/sachenl/project5/main/images/fig4.png)
+As there is some duplecate lesion_id which belong to same patient, all the features except the image_id for them are same with each other.  Thus, we first find and remove the duplex in patient id  and then plot the distributions of each features.
 
 #### plot distribution of features 'dx', 'dx_type',  'sex', 'localization'.
 
